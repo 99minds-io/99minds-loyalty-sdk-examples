@@ -1,0 +1,228 @@
+.ways_to_earn {
+  padding: 80px 0;
+}
+.ways_to_earn .main-page-title {
+  text-align: center;
+  margin: 0 0 30px;
+  font-weight: bold;
+}
+#ways_to_earn {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#ways_to_earn .item-box {
+  min-height: 100px;
+  padding: 50px 25px;
+  background: #fff;
+  border: 0;
+  color: #000;
+  text-align: center;
+  width: calc(25% - 12px);
+  background-color: #BEE0DD;
+  border-radius: 10px;
+  transition: 0.3s;
+  position: relative;
+}
+.ways_to_earn .content.icon {
+  background-color: rgba(255,255,255,.7);
+  padding: 20px;
+  display: inline-flex;
+  vertical-align: top;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+#ways_to_earn .item-box:hover {
+    background-color: #95bfbb;
+}
+.ways_to_earn .content.icon svg {
+  width: 60px;
+}
+.ways_to_earn .card-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.ways_to_earn .card-description {
+  font-size: 18px;
+  line-height: normal;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ways_to_earn .modal {
+    z-index: 9;
+}
+.ways_to_earn .modal-content {
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+  padding: 30px;
+}
+.ways_to_earn .close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  line-height: 1;
+  color: #000;
+}
+.ways_to_earn .modal-content h3 {
+  font-weight: bold;
+  font-size: 26px;
+  letter-spacing: 0;
+  color: #000;
+  margin-bottom: 20px;
+}
+.ways_to_earn .modal-content label {
+  letter-spacing: 0;
+  font-size: 16px;
+  min-width: 48px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  text-align: left;
+}
+.ways_to_earn .modal-content select {
+    width: 110px;
+    height: 40px;
+    border-radius: 4px;
+    background: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: none;
+    outline: none;
+}
+.ways_to_earn .birthdate_save:after, .ways_to_earn .birthdate_save:before {
+    display: none;
+}
+.ways_to_earn .birthdate_save {
+  border-radius: 4px;
+  letter-spacing: 0;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.ways_to_earn .birthdate_save:hover {
+  background-color: #bee0dd;
+  color: #222;
+}
+#ways_to_earn .item-box > button {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  border: 0;
+  border-radius: 10px;
+}
+#ways_to_earn .item-box>button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #fff;
+}
+.success_msg {
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    color: #20D489;
+    font-weight: 400;
+}
+.error_message {
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    color: red;
+    font-weight: 400;
+}
+@media only screen and (min-width:990px) and (max-width: 1100px) {
+  #ways_to_earn .item-box {
+    width: calc(33.33% - 10px);
+  }
+}
+@media only screen and (min-width:768px) and (max-width: 989px) {
+  #ways_to_earn .item-box {
+    width: calc(50% - 8px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ways_to_earn {
+    padding: 40px 0;
+  }
+  #ways_to_earn .item-box {
+    width: 100%;
+  }
+  .ways_to_earn .card-title {
+    font-size: 20px;
+  }
+}
+
+/* Add these styles to your CSS for the toaster notification */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #f44336;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+.toast.success { background-color: green; }
+
+.toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}

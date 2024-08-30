@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: gray;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
