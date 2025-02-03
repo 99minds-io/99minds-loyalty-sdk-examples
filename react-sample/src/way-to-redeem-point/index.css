@@ -1,0 +1,130 @@
+.ways_to_redeem {
+  padding: 80px 0;
+  background-color: #f2f9f8;
+  box-sizing: border-box;
+}
+
+.ways_to_redeem .page-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.ways_to_redeem * {
+  box-sizing: border-box;
+}
+
+.ways_to_redeem .main-page-title {
+  text-align: center;
+  margin: 0 0 20px;
+  font-weight: bold;
+  font-size: 32px;
+}
+.ways_to_redeem ul {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.ways_to_redeem .item-box {
+  min-height: 100px;
+  padding: 35px 25px;
+  color: #000;
+  text-align: center;
+  width: calc(25% - 12px);
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.ways_to_redeem .item-box:hover {
+  background-color: #bee0dd;
+}
+.ways_to_redeem .item-box:hover .content.icon {
+  background-color: #fff;
+}
+.ways_to_redeem .content.icon {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: inline-flex;
+  vertical-align: top;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+.ways_to_redeem .content.icon svg {
+  width: 60px;
+}
+.ways_to_redeem .card-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.ways_to_redeem .card-description {
+  font-size: 18px;
+  line-height: 25px;
+}
+.ways_to_redeem .redeem_button {
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 11px 25px;
+  min-width: auto;
+  height: auto;
+  min-height: auto;
+  transition: 0.3s;
+  border: 0;
+  box-shadow: none;
+  font-weight: bold;
+  background-color: rgb(18, 18, 18);
+  color: #fff;
+  cursor: pointer;
+}
+.ways_to_redeem .redeem_button:disabled {
+  cursor: not-allowed;
+  color: #fff;
+  background-color: gray;
+}
+.ways_to_redeem .redeem_button:after,
+.ways_to_redeem .redeem_button:before {
+  display: none;
+}
+.ways_to_redeem .redeem_button:hover {
+  background-color: #6aa39d;
+}
+
+.success_message {
+  font-size: 14px !important;
+  margin-top: 5px !important;
+  color: #20d489;
+  font-weight: 400;
+}
+@media only screen and (min-width: 990px) and (max-width: 1100px) {
+  .ways_to_redeem .item-box {
+    width: calc(33.33% - 10px);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+  .ways_to_redeem .item-box {
+    width: calc(50% - 8px);
+    padding: 20px 25px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ways_to_redeem {
+    padding: 40px 0;
+  }
+  .ways_to_redeem .main-page-title {
+    font-size: 26px;
+  }
+  .ways_to_redeem .item-box {
+    width: 100%;
+    padding: 20px 25px;
+  }
+}

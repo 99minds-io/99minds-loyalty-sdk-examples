@@ -1,0 +1,86 @@
+{{ 'loyalty-vip-cards.css' | asset_url | stylesheet_tag }}
+<script>
+
+    // Function to create VIP card items
+    function createVipCardItems(vipOptions) {
+        return vipOptions.map(option => `
+            <li class="vip-tier-container">
+                <div class="vip-tier-header is-background-blue">
+                    <div class="vip-tier-threshold">${option.description}</div>
+                    <div class="vip-tier-name">${option.title}</div>
+                </div>
+                <div class="vip-tier-benefits">
+                    <ul class="vip-tier-benefits-list">
+                        ${option.benefits.map(benefit => `
+                            <li class="vip-tier-benefits-list-item">${benefit.title}</li>
+                        `).join('')}
+                    </ul>
+                </div>
+            </li>
+        `).join('');
+    }
+
+
+
+    (async function() {
+        try {
+            const info = await window.myinfo;
+            const data = info.data.settings;
+
+            document.getElementById('vip_cards').innerHTML = 
+                createVipCardItems(data.vip_card.options);
+
+        } catch (error) {
+            console.error('Error fetching rewards:', error);
+        }
+    })();
+</script>
+
+<!-- VIP Section -->
+<div class="page-width section-{{ section.id }}-padding">
+  <h2 class="main-page-title page-title h1{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    VIPs Earn Even More
+  </h2>
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <ul id="vip_cards" class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}" role="list"></ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "VIP Card",
+  "tag": "section",
+  "class": "loyalty_vip_cards",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "VIP Card"
+    }
+  ]
+}
+{% endschema %}

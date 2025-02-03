@@ -1,0 +1,80 @@
+.how-it-works-container {
+    background-color: #f2f9f8;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .how-it-works-container-inner {
+    background-color: white;
+  }
+  .how-it-works-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
+  }
+  
+  .how-it-works-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .how-it-works-step {
+    flex: 1;
+    padding: 20px;
+    min-width: 280px; 
+  }
+  
+  .how-it-works-container h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: .5em;
+  }
+
+  .how-it-works-step h3 {
+    font-size: 32px;
+  }
+  
+  .how-it-works-step h4 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .how-it-works-step p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  @media (max-width: 768px) {
+    .how-it-works-step {
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .how-it-works-container {
+      padding: 30px 15px;
+    }
+    .how-it-works-container h2 {
+      font-size: 26px;
+    }
+    .how-it-works-step h3 {
+      font-size: 1.75rem;
+    }
+  
+    .how-it-works-step h4 {
+      font-size: 1.1rem;
+    }
+  
+    .how-it-works-step p {
+      font-size: 0.9rem;
+    }
+  }

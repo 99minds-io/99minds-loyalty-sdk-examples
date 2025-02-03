@@ -1,0 +1,131 @@
+.ways_to_earn {
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+.ways_to_earn .page-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.ways_to_earn * {
+  box-sizing: border-box;
+}
+
+.ways_to_earn .main-page-title {
+  text-align: center;
+  margin: 0 0 30px;
+  font-weight: bold;
+  font-size: 32px;
+}
+#ways_to_earn {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#ways_to_earn .item-box {
+  min-height: 100px;
+  padding: 50px 25px;
+  background: #fff;
+  border: 0;
+  color: #000;
+  text-align: center;
+  width: calc(25% - 12px);
+  background-color: #bee0dd;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.ways_to_earn .content.icon {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  display: inline-flex;
+  vertical-align: top;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+#ways_to_earn .item-box:hover {
+  background-color: #95bfbb;
+}
+.ways_to_earn .content.icon svg {
+  width: 60px;
+}
+.ways_to_earn .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: normal;
+}
+.ways_to_earn .card-description {
+  font-size: 16px;
+  line-height: 25px;
+}
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  background: white;
+}
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.modal-button {
+  background: black;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background: #333;
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1100px) {
+  #ways_to_earn .item-box {
+    width: calc(33.33% - 10px);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+  #ways_to_earn .item-box {
+    width: calc(50% - 8px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ways_to_earn {
+    padding: 40px 0;
+  }
+  .ways_to_earn .main-page-title {
+    font-size: 26px;
+  }
+  #ways_to_earn .item-box {
+    width: 100%;
+  }
+  .ways_to_earn .card-title {
+    font-size: 20px;
+  }
+}

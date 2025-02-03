@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://assets.99minds.io/qa/loyalty-sdk/bundle.js"></script>
+    <script>
+      window.sdk = new MindsSDK.Loyalty({
+        apiKey: 'key_test_583yfYvq1h4C9dxYFgnkzRY53Yr9lAWXfTDNniJWRFM',
+        platform: 'SHOPIFY',
+        shopDomain: 'burgergirl.myshopify.com',
+        useAppProxy: false,
+        getCurrentCustomer: async () => '7695268872432',
+      });
+
+      window.myinfo = window.sdk.resource.getInfo();
+      window.pointsBalance = window.sdk.resource.getPointsBalance();
+    </script>
+</head>
+<body>
+<header>
+    <link href="css/header.css" rel="stylesheet" type="text/css" media="all"/>
+    <div class="header-container">
+      <div class="logo-container">
+        <img
+          src="public/images/placeholder-logo-1.png"
+          alt="99Minds Logo"
+          class="logo"
+        />
+      </div>
+        <div id="logout-container" class="logout-container" style="display: none;">
+          <button id="logout-button">Logout</button>
+        </div>
+    </div>
+</header>
+<section class="shopify-section section-hero">
+    <link href="css/section-hero.css" rel="stylesheet" type="text/css" media="all"/>
+    <div class="welcome-container">
+      <div class="welcome-card">
+        <h1>Welcome to the program</h1>
+        <p>As a member, you will earn points for shopping</p>
+        <div class="welcome-buttons">
+          <button class="welcome-button" id="earnButton">Join Now</button>
+          <button id="redeemButton" class="welcome-button">Sign In</button>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="shopify-section section how-it-work">
+    <link href="css/how-it-works.css" rel="stylesheet" type="text/css" media="all"/>
+    <div class="how-it-works-container">
+      <h2 class="how-it-works-heading">How It Works</h2>
+      <div class="how-it-works-content">
+        <div class="how-it-works-step">
+          <h3>1</h3>
+          <h4>EARN POINTS</h4>
+          <p>
+            Earn 99Minds points every time you shop. For every dollar you
+            spend, you earn one point.
+          </p>
+        </div>
+        <div class="how-it-works-step">
+          <h3>2</h3>
+          <h4>JOIN</h4>
+          <p>Join the 99Minds Rewards Program to access your points.</p>
+        </div>
+        <div class="how-it-works-step">
+          <h3>3</h3>
+          <h4>REDEEM</h4>
+          <p>
+            Redeem every 100 points for $5 off your next order at checkout. The
+            more points you have, the more you can save!
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="shopify-section loyalty_rewards" id="loyalty_rewards" style="display:none;">
+    <link href="css/loyalty-rewards.css" rel="stylesheet" type="text/css" media="all">
+    <script src="javascript/loyalty-rewards.js"></script>
+
+    <div class="page-width">
+       <h4 id="customer_rewards" class="main-page-title page-title h0"></h4> 
+       <p>Here's an overview of your current points balance and recent activity</p>
+       <div>
+         <table border="1" id="points-logs-activity" rivo-x-data="$store.customer.points_logs">
+            <thead>
+              <tr>
+                <th>Activity</th>
+                <th class="rivo-text-right">Points</th>
+                <th class="rivo-text-right">Date</th>
+              </tr>
+            </thead>
+            <tbody id="activity_table">
+            </tbody>
+          </table>
+       </div>
+    </div>
+    <!-- Rewards Section -->
+    <div class="page-width">
+      <h2 class="main-page-title page-title h1">
+        Rewards
+      </h2>
+      <div class="rte">
+        <ul id="my_rewards" class="multicolumn-list contains-content-container grid" role="list"></ul>
+      </div>
+    </div>
+
+</section>
+
+<section class="shopify-section ways_to_earn">
+    <link href="css/ways-to-earn.css" rel="stylesheet" type="text/css" media="all">
+    <script src="javascript/way-to-earn.js"></script>
+
+    <!-- Ways to Earn Points Section -->
+    <div class="page-width" id="loyalty_ways_to_earn">
+     	<h2 class="main-page-title page-title h1">Ways to Earn Points</h2>
+    	<div class="rte">
+        	<ul id="ways_to_earn" class="multicolumn-list contains-content-container grid grid---col-tablet-down grid---col-desktop" role="list"></ul>
+      	</div>
+      	<div id="dynamicModal" class="modal">
+        	<div class="modal-content">
+            	<span class="close">×</span>
+            	<div id="modal-header"></div>
+            	<div id="modal-body"></div>
+            	<div id="modal-footer"></div>
+        	</div>
+    	</div>
+    </div>
+</section>
+
+<section class="shopify-section ways_to_redeem">
+    <link href="css/ways-to-redeem.css" rel="stylesheet" type="text/css" media="all">
+
+    <script src="javascript/ways-to-redeem.js"></script>
+
+    <div class="page-width" id="loyalty_ways_to_redeem">
+      <h2 class="main-page-title page-title h1">
+        Ways to Redeem your Points
+      </h2>
+      <div class="rte">
+        <ul id="ways_to_redeem" class="multicolumn-list contains-content-container grid grid---col-tablet-down grid---col-desktop" role="list"></ul>
+      </div>
+    </div>
+</section>
+
+<section class="shopify-section loyalty_vip_cards">
+    <link href="css/loyalty-vip-card.css" rel="stylesheet" type="text/css" media="all">
+
+    <script src="javascript/vip-cards.js"></script>
+
+    <div class="page-width">
+        <h2 class="main-page-title page-title h1">
+            VIPs Earn Even More
+        </h2>
+        <div class="rte">
+            <ul id="vip_cards" class="multicolumn-list contains-content-container grid" role="list"></ul>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <link href="css/footer.css" rel="stylesheet" type="text/css" media="all"/>
+    <p>&copy; 2024 99Minds. All Rights Reserved.</p>
+</footer>
+<script src="javascript/index.js"></script>
+</body>
+</html>

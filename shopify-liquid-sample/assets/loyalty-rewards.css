@@ -1,0 +1,102 @@
+.loyalty_rewards {
+  padding: 80px 0;
+  background-color: #bee0dd;
+  text-align: center;
+}
+.loyalty_rewards #customer_rewards {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.loyalty_rewards .main-page-title {
+  text-align: center;
+  margin: 0 0 30px;
+  font-weight: bold;
+}
+.loyalty_rewards ul[role="list"] {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.loyalty_rewards .item-box {
+  min-height: 100px;
+  padding: 35px 25px;
+  color: #000;
+  text-align: center;
+  width: calc(25% - 12px);
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.loyalty_rewards .item-box:hover {
+  background-color: #fff;
+}
+.loyalty_rewards .item-box:hover .content.icon {
+  background-color: #bee0dd;
+}
+.loyalty_rewards .content.icon {
+  background-color: rgba(0, 0, 0, .1);
+  padding: 20px;
+  display: inline-flex;
+  vertical-align: top;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+.loyalty_rewards .content.icon svg {
+  width: 60px;
+}
+.loyalty_rewards .card-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.loyalty_rewards .card-description {
+  font-size: 18px;
+  line-height: normal;
+}
+.loyalty_rewards .copy_coupon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+.loyalty_rewards .copy_coupon svg {
+  width: 18px;
+  height: auto;
+}
+.loyalty_rewards table {
+  margin: 0 auto 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@media only screen and (min-width:990px) and (max-width: 1100px) {
+  .loyalty_rewards .item-box {
+    width: calc(33.33% - 10px);
+  }
+}
+@media only screen and (min-width:768px) and (max-width: 989px) {
+  .loyalty_rewards .item-box {
+    width: calc(50% - 8px);
+    padding: 20px 25px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .loyalty_rewards {
+    padding: 40px 0;
+  }
+  .loyalty_rewards .item-box {
+    width: 100%;
+    padding: 20px 25px;
+  }
+  .loyalty_rewards #customer_rewards {
+    font-size: 26px;
+  }
+}

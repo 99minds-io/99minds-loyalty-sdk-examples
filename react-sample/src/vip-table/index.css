@@ -1,0 +1,92 @@
+
+.page-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  width:100%;
+  box-sizing: border-box;
+}
+.loyalty_vip_cards * {
+  box-sizing: border-box;
+}
+
+.loyalty_vip_cards {
+  padding: 80px 15px;
+}
+.loyalty_vip_cards .main-page-title {
+  text-align: center;
+  margin: 0 0 30px;
+  font-weight: bold;
+  font-size: 32px;
+}
+#vip_cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+#vip_cards .vip-tier-container {
+    padding: 0 32px;
+    color: #000;
+    width: calc(33.33% - 14px);
+    border: 1px solid #38706b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.loyalty_vip_cards .vip-tier-header {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-height: 180px;
+    margin: 0 -32px;
+    background-color: #BEE0DD;
+}
+.loyalty_vip_cards .vip-tier-threshold {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: normal;
+}
+.loyalty_vip_cards .vip-tier-name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: normal;
+}
+.loyalty_vip_cards .vip-tier-benefits ul {
+    padding: 20px 0 32px;
+    list-style: none;
+}
+.loyalty_vip_cards .vip-tier-benefits ul li {
+    display: block;
+    background-repeat: no-repeat;
+    line-height: normal;
+    background-image: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6389 3.90917L12.0227 2.29297L5.25095 9.06204L2.0205 5.83189L0.404297 7.44809L5.25257 12.2964L6.88695 10.658L13.6389 3.90917Z" fill="%23000"/></svg>');
+    background-position: 0 4px;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+@media only screen and (min-width:768px) and (max-width: 989px) {
+  #vip_cards .item-box {
+    width: calc(50% - 10px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .loyalty_vip_cards {
+    padding: 40px 15px;
+  }
+  .loyalty_vip_cards .main-page-title {
+    font-size: 26px;
+  }
+  #vip_cards .vip-tier-container {
+    width: 100%;
+  }
+  .loyalty_vip_cards .vip-tier-name {
+      font-size: 30px;
+  }
+  .loyalty_vip_cards .vip-tier-header {
+      min-height: 140px;
+  }
+}
